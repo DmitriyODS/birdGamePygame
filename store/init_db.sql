@@ -1,0 +1,10 @@
+BEGIN;
+
+CREATE TABLE IF NOT EXISTS scores
+(
+    id          INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    score       INTEGER NOT NULL DEFAULT 0,
+    date_create INTEGER NOT NULL DEFAULT (strftime('%s', 'now'))
+);
+
+COMMIT;
